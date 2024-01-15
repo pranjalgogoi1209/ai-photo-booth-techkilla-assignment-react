@@ -11,3 +11,12 @@ h1,
 button {
   font-size: 3vw;
 }
+button {
+  border: 1px solid black;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}

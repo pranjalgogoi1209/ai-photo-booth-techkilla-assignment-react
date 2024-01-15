@@ -28,6 +28,4 @@ const NavbarWrapper = styled.nav`
       height: 100%;
     }
   }
-  .title {
-  }
 `;

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { Navbar } from "../components";
 
 import {
@@ -31,7 +32,9 @@ export default function Home() {
   return (
     <HomeWrapper>
       <Navbar />
-      <button>Start Now</button>
+      <Link to={"/capture-image"}>
+        <button>Start Now</button>
+      </Link>
       <main className="images-container">
         {superHeros &&
           superHeros.map(superHero => <img src={superHero} key={superHero} />)}
@@ -55,11 +58,9 @@ const HomeWrapper = styled.div`
       cursor: pointer;
     }
   }
-  button {
-    border: 1px solid black;
-    display: block;
-    margin: auto;
-    outline: none;
-    background-color: transparent;
+  a {
+    text-decoration: none;
+    button {
+    }
   }
 `;
