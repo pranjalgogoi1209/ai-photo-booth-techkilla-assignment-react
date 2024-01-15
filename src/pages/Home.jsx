@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { Navbar } from "../components";
 
 import {
   superHero1,
@@ -31,7 +30,6 @@ export default function Home() {
   ];
   return (
     <HomeWrapper>
-      <Navbar />
       <Link to={"/capture-image"}>
         <button>Start Now</button>
       </Link>
@@ -61,6 +59,9 @@ const HomeWrapper = styled.div`
   a {
     text-decoration: none;
     button {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 `;
