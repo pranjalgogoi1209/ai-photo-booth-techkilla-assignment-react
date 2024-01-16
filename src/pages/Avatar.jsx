@@ -33,7 +33,7 @@ export default function Avatar() {
     <AvatarWrapper>
       <main className="images-container">
         {superHeros &&
-          superHeros.map((superHero, index) => (
+          superHeros.reverse().map((superHero, index) => (
             <div
               key={superHero}
               className={index === selectedImg ? "selected-img" : ""}

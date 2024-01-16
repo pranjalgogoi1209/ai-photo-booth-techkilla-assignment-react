@@ -1,12 +1,14 @@
 import React, { useRef, useState } from "react";
 import Webcam from "react-webcam";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function CaptureImage() {
   const [img, setImg] = useState();
   const webRef = useRef();
   const btnRef = useRef();
+  const navigate = useNavigate();
+
   const handleCapture = () => {
     if (btnRef.current.innerText === "Capture") {
       setImg(webRef.current.getScreenshot());
@@ -17,6 +19,13 @@ export default function CaptureImage() {
     }
   };
 
+  const handleSubmit = () => {
+    if (img) {
+      navigate("/avatar");
+    } else {
+      alert("Capture an image");
+    }
+  };
   return (
     <CaptureImageWrapper>
       <div className="webcam-container">
@@ -26,9 +35,9 @@ export default function CaptureImage() {
       <button onClick={handleCapture} ref={btnRef} className="capture">
         Capture
       </button>
-      <Link to={"/avatar"}>
-        <button className="submit">Submit</button>
-      </Link>
+      <button className="submit" onClick={handleSubmit}>
+        Submit
+      </button>
     </CaptureImageWrapper>
   );
 }

@@ -6,16 +6,26 @@
 }
 body {
   padding: 2vw 2vw 2vw 2vw;
+  background-color: #f1f1f1;
+  background-image: url("./assets/wall-1.png");
+  background-position: center;
+  background-size: cover;
 }
-h1,
-button {
+h1 {
   font-size: 3vw;
 }
 button {
-  border: 1px solid black;
+  font-size: 2vw;
+  padding: 1vw 1.5vw 1vw 1.5vw;
+  border: none;
+  border-radius: 2vw;
   outline: none;
   background-color: transparent;
   cursor: pointer;
+  background-color: #212121;
+  color: #f1f1f1;
+  font-weight: bold;
+  transition: background 0.5s;
 }
 a {
   text-decoration: none;
