@@ -175,9 +175,8 @@ const HomeWrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 2vw;
-    /* height: calc(100vh - 120px); */
     main {
-      border: 1px solid black;
+      border: 1px solid red;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -195,8 +194,8 @@ const HomeWrapper = styled.div`
       }
       img {
         position: relative;
-        width: 12vw;
-        height: 28vh;
+        width: 13vw;
+        height: 15vw;
         cursor: pointer;
         border-radius: 50%;
         border: 0.3vw solid rgba(33, 33, 33, 0.9);
@@ -213,9 +212,9 @@ const HomeWrapper = styled.div`
         background-color: rgba(33, 33, 33, 0.6);
         position: absolute;
         top: 0.5vw;
-        left: 0vw;
-        width: 10vw;
-        height: 4vh;
+        left: -0.2vw;
+        width: 12vw;
+        height: 2.5vw;
         z-index: 0;
         transform: rotate(-10deg);
       }
@@ -243,6 +242,73 @@ const HomeWrapper = styled.div`
         &:hover::after {
           left: 100%;
           right: 0;
+        }
+      }
+    }
+  }
+
+  /* for ultra hi-res laptops and desktops */
+  @media screen and (min-width: 1721px) {
+    background-color: green;
+    main {
+      img {
+        width: 13vw;
+        height: 15vw;
+      }
+      .superhero-container {
+        .design {
+          top: 0.5vw;
+          left: -0.2vw;
+          width: 12vw;
+          height: 2.5vw;
+        }
+      }
+    }
+  }
+
+  /* smartphones, iPhone, portrait 480x320 phones */
+  @media screen and (max-width: 767px) {
+    background-color: pink;
+    .Home {
+      gap: 5vw;
+      margin-top: 5vw;
+      main {
+        flex-direction: row;
+        justify-content: center;
+        gap: 5vw;
+        .superHeros1,
+        .superHeros2,
+        .superHeros3 {
+          width: 43%;
+          flex-direction: column;
+          align-items: center;
+          gap: 5vw;
+          .design {
+            display: none;
+          }
+        }
+        img {
+          border: 0.6vw solid rgba(33, 33, 33, 0.9);
+          width: 40vw;
+          height: 60vw;
+          border-radius: 2vw;
+          &:hover {
+            transform: rotate(10deg);
+          }
+        }
+        .superHeros3 {
+          width: 100%;
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+      }
+      a {
+        width: 30.6vw;
+
+        border: 1px solid black;
+        button {
+          font-size: 5vw;
+          padding: 1.7vw 2vw;
         }
       }
     }

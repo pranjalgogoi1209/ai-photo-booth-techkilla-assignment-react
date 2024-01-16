@@ -23,7 +23,7 @@ const NavbarWrapper = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
+  height: 5.5vw;
   .logo {
     border: 1px solid black;
     width: 20vw;
@@ -35,5 +35,26 @@ const NavbarWrapper = styled.nav`
   .title {
     color: #212121;
     text-shadow: 0.2vw 0.2vw 0.2vw rgba(33, 33, 33, 0.5);
+  }
+
+  /* for ultra hi-res laptops and desktops */
+  @media screen and (min-width: 1721px) {
+    background-color: green;
+  }
+
+  /* smartphones, iPhone, portrait 480x320 phones */
+  @media screen and (max-width: 767px) {
+    background-color: pink;
+    height: 10.5vw;
+    .logo {
+      width: 35vw;
+    }
+    .title {
+      h1 {
+        font-size: 5vw;
+        color: #212121;
+        text-shadow: 0.2vw 0.2vw 0.2vw rgba(33, 33, 33, 0.5);
+      }
+    }
   }
 `;

@@ -22,9 +22,12 @@ export default function CaptureImage({ setCapturedImg }) {
     }
   };
 
-  setTimeout(() => {
-    setIsWebcamPresent(true);
-  }, 1300);
+  useEffect(() => {
+    webRef.current &&
+      setTimeout(() => {
+        setIsWebcamPresent(true);
+      }, 1500);
+  }, [webRef.current]);
 
   // toast options
   const toastOptions = {
@@ -53,7 +56,7 @@ export default function CaptureImage({ setCapturedImg }) {
       <div className="webcam-container">
         <div className="webcam-parent">
           <Webcam ref={webRef} className="webcam" />
-          {isWebcamPresent && <i className="fa-solid fa-eye fa-bounce"></i>}
+          {isWebcamPresent && <i className="fa-solid fa-camera fa-bounce"></i>}
         </div>
         {img && <img src={img} />}
       </div>
@@ -67,7 +70,7 @@ export default function CaptureImage({ setCapturedImg }) {
 }
 
 const CaptureImageWrapper = styled.div`
-  height: calc(100vh - 120px);
+  /* height: calc(100vh - 120px); */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -79,8 +82,8 @@ const CaptureImageWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     position: relative;
-    height: 50vh;
-    width: 33vw;
+    width: 40vw;
+    height: 30vw;
     background-color: #212121;
     border-radius: 2vw;
     .webcam-parent {
@@ -88,9 +91,9 @@ const CaptureImageWrapper = styled.div`
       i {
         font-size: 2.5vw;
         position: absolute;
-        top: 1.7vw;
-        left: 15vw;
-        color: #ccc;
+        top: 2vw;
+        left: 18.5vw;
+        color: #eee;
       }
     }
   }
@@ -135,6 +138,28 @@ const CaptureImageWrapper = styled.div`
     &:hover::after {
       left: 100%;
       right: 0;
+    }
+  }
+
+  /* for ultra hi-res laptops and desktops */
+  @media screen and (min-width: 1721px) {
+    margin-top: 2vw;
+    background-color: green;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    .webcam-container {
+      width: 40vw;
+      height: 30vw;
+      .webcam-parent {
+        i {
+          top: 2vw;
+          left: 18.5vw;
+        }
+      }
+    }
+    .submit {
+      width: 40vw;
     }
   }
 `;

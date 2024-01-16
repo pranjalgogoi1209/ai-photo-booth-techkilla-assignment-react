@@ -10,6 +10,8 @@ body {
   background-image: url("./assets/wall-1.png");
   background-position: center;
   background-size: cover;
+  background-repeat: repeat-y;
+  /* background: linear-gradient(skyblue, white); */
 }
 h1 {
   font-size: 3vw;

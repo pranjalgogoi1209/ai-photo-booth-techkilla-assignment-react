@@ -64,12 +64,13 @@ export default function Avatar({ capturedImg }) {
       <h1>Select your Avatar</h1>
       <main>
         {superHeros &&
-          superHeros.map((superHero, index) => (
+          superHeros.reverse().map((superHero, index) => (
             <div
               key={index}
               className={`single-image ${
                 index === selectedImg ? "selected" : ""
               }`}
+              onClick={() => setSelectedImg(index)}
             >
               <img src={superHero.img} />
 
@@ -77,7 +78,7 @@ export default function Avatar({ capturedImg }) {
                 className="img-hover-effect"
                 onClick={() => setSelectedImg(index)}
               >
-                <p>Select {superHero.name}'s avatar and generate your image</p>
+                <p>Select {superHero.name} avatar and generate your image</p>
                 <img src={capturedImg} alt="user-captured-image" />
               </div>
               <div className="selected-text">Selected</div>
@@ -97,22 +98,24 @@ const AvatarWrapper = styled.div`
   align-items: center;
   gap: 2vw;
   main {
+    border: 1px solid black;
+    padding: 1vw;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 8vw;
+    gap: 6vw;
     .single-image {
       box-shadow: 0 0.8vw 1vw rgba(33, 33, 33, 1);
       height: 39.5vh;
       position: relative;
       border: 0.3vw solid #212121;
-      border-bottom: 0;
       border-top-right-radius: 2vw;
       border-top-left-radius: 2vw;
       overflow: hidden;
       transition: all ease 0.3s;
       img {
         width: 15vw;
+        height: 100%;
         cursor: pointer;
         transition: all 0.5s;
       }
@@ -126,10 +129,15 @@ const AvatarWrapper = styled.div`
     .selected {
       border: 0.3vw solid #f1f1f1;
       position: relative;
+      .not-display {
+        display: none;
+      }
       .selected-text {
+        display: flex;
+        border: 1px solid black;
         position: absolute;
-        bottom: 3.1vw;
-        left: 4.5vw;
+        bottom: 3.3vw;
+        right: 0vw;
         transform: rotate(-40deg);
         font-size: 2vw;
         color: #f1f1f1;
@@ -187,5 +195,10 @@ const AvatarWrapper = styled.div`
       left: 100%;
       right: 0;
     }
+  }
+
+  /* for ultra hi-res laptops and desktops */
+  @media screen and (min-width: 1721px) {
+    background-color: green;
   }
 `;
