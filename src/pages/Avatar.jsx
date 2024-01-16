@@ -114,7 +114,7 @@ const AvatarWrapper = styled.div`
       overflow: hidden;
       transition: all ease 0.3s;
       img {
-        width: 15vw;
+        width: 100%;
         height: 100%;
         cursor: pointer;
         transition: all 0.5s;
@@ -134,7 +134,6 @@ const AvatarWrapper = styled.div`
       }
       .selected-text {
         display: flex;
-        border: 1px solid black;
         position: absolute;
         bottom: 3.3vw;
         right: 0vw;
@@ -200,5 +199,55 @@ const AvatarWrapper = styled.div`
   /* for ultra hi-res laptops and desktops */
   @media screen and (min-width: 1721px) {
     background-color: green;
+  }
+
+  /* for phones */
+  @media screen and (max-width: 767px) {
+    background-color: pink;
+    gap: 5vw;
+    margin-top: 5vw;
+    h1 {
+      font-size: 7vw;
+    }
+    main {
+      gap: 6vw;
+      .single-image {
+        border: 0.6vw solid #212121;
+        height: 50vw;
+        width: 40vw;
+      }
+      .selected {
+        border: 0.6vw solid #f1f1f1;
+        .selected-text {
+          bottom: 6vw;
+          right: 0.7vw;
+          font-size: 3.3vw;
+          padding: 1vw 1.7vw;
+          border: 0.4vw solid #f1f1f1;
+        }
+      }
+      .img-hover-effect {
+        gap: 3vw;
+        img {
+          border-radius: 50%;
+          width: 12vw;
+          height: 12vw;
+          border: 0.2vw solid #f1f1f1;
+        }
+        p {
+          padding: 1vw;
+          /* line-height: 2vh; */
+          font-size: 3vw;
+        }
+      }
+    }
+    button {
+      box-shadow: 0 0 1vw rgba(33, 33, 33, 0.7);
+      width: 86vw;
+      height: 8vh;
+      font-size: 6vw;
+      padding: 1.7vw 2vw;
+      border-radius: 6vw;
+    }
   }
 `;
