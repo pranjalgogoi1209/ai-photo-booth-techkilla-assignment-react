@@ -1,10 +1,13 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Webcam from "react-webcam";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function CaptureImage() {
   const [img, setImg] = useState();
+  const [isWebcamPresent, setIsWebcamPresent] = useState(false);
   const webRef = useRef();
   const btnRef = useRef();
   const navigate = useNavigate();
@@ -19,22 +22,37 @@ export default function CaptureImage() {
     }
   };
 
+  setTimeout(() => {
+    setIsWebcamPresent(true);
+  }, 1300);
+
+  // toast options
+  const toastOptions = {
+    position: "bottom-left",
+    autoClose: 4000,
+    pauseOnHover: true,
+    draggable: true,
+    theme: "dark",
+  };
+
   const handleSubmit = () => {
     if (img) {
       navigate("/avatar");
     } else {
-      alert("Capture an image");
+      toast.error("Please capture your image", toastOptions);
     }
   };
+
   return (
     <CaptureImageWrapper>
       <button onClick={handleCapture} ref={btnRef} className="capture">
         Capture
       </button>
+
       <div className="webcam-container">
         <div className="webcam-parent">
           <Webcam ref={webRef} className="webcam" />
-          <i>Watching</i>
+          {isWebcamPresent && <i className="fa-solid fa-eye fa-bounce"></i>}
         </div>
         {img && <img src={img} />}
       </div>
@@ -42,6 +60,7 @@ export default function CaptureImage() {
       <button className="submit" onClick={handleSubmit}>
         Submit
       </button>
+      <ToastContainer />
     </CaptureImageWrapper>
   );
 }
@@ -66,9 +85,11 @@ const CaptureImageWrapper = styled.div`
     .webcam-parent {
       position: relative;
       i {
+        font-size: 2.5vw;
         position: absolute;
-        top: 0.5vw;
-        left: 13vw;
+        top: 1.7vw;
+        left: 15vw;
+        color: #ccc;
       }
     }
   }
@@ -90,9 +111,29 @@ const CaptureImageWrapper = styled.div`
     background-color: #212121;
     color: #f1f1f1;
     border: 0.3vw solid #212121;
+    border-radius: 1vw;
+    padding: 0.7vw 1vw 0.7vw 1vw;
   }
   .submit {
     margin-top: 2vw;
     width: 33vw;
+    transition: box-shadow ease 0.3s;
+    box-shadow: 0 0 0.7vw rgba(33, 33, 33, 0.7);
+    position: relative;
+    overflow: hidden;
+    &::after {
+      content: "";
+      position: absolute;
+      left: -10px;
+      top: 0;
+      width: 7px;
+      height: 100%;
+      background-color: #f1f1f1;
+      transition: all ease 0.8s;
+    }
+    &:hover::after {
+      left: 100%;
+      right: 0;
+    }
   }
 `;
