@@ -45,13 +45,13 @@ const NavbarWrapper = styled.nav`
   /* fot tablets */
   @media screen and (max-width: 991px) {
     background-color: orange;
-    height: 10.5vw;
+    height: 9.5vw;
     .logo {
-      width: 35vw;
+      width: 34vw;
     }
     .title {
       h1 {
-        font-size: 5vw;
+        font-size: 4.6vw;
         color: #212121;
         text-shadow: 0.2vw 0.2vw 0.2vw rgba(33, 33, 33, 0.5);
       }

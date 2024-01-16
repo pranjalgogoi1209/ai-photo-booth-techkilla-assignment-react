@@ -83,7 +83,10 @@ const CaptureImageWrapper = styled.div`
     height: 30vw;
     background-color: #212121;
     border-radius: 2vw;
+    overflow: hidden;
     .webcam-parent {
+      width: 100%;
+      height: 100%;
       position: relative;
       i {
         font-size: 2.5vw;

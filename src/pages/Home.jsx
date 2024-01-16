@@ -284,7 +284,7 @@ const HomeWrapper = styled.div`
         }
         img {
           width: 20vw;
-          height: 25vw;
+          height: 28vw;
           border-radius: 2vw;
           border: 0.4vw solid #212121;
           &:hover {
@@ -298,12 +298,12 @@ const HomeWrapper = styled.div`
         }
       }
       a {
-        width: 29.6vw;
+        width: 27.5vw;
         border: 1px solid black;
         border-radius: 5vw;
         button {
           border-radius: 5vw;
-          font-size: 4vw;
+          font-size: 3.6vw;
           padding: 1.7vw 4.1vw;
         }
       }
