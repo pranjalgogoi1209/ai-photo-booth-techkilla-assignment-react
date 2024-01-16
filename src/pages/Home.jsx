@@ -266,7 +266,7 @@ const HomeWrapper = styled.div`
     }
   }
 
-  /* for tablet */
+  /* for big tablets and mobile landscape */
   @media screen and (max-width: 991px) {
     .Home {
       background-color: orange;

@@ -204,47 +204,45 @@ const AvatarWrapper = styled.div`
   /* for big-tablets & mobile-landscape */
   @media screen and (max-width: 991px) {
     background-color: orange;
-    gap: 5vw;
+    gap: 4vw;
     margin-top: 5vw;
     h1 {
       font-size: 7vw;
     }
     main {
-      gap: 6vw;
+      gap: 4vw;
       .single-image {
-        border: 0.6vw solid #212121;
-        height: 50vw;
-        width: 40vw;
+        border: 0.4vw solid #212121;
+        height: 35vw;
+        width: 27vw;
       }
       .selected {
-        border: 0.6vw solid #f1f1f1;
+        border: 0.4vw solid #f1f1f1;
         .selected-text {
-          bottom: 6vw;
-          right: 0.7vw;
-          font-size: 3.3vw;
-          padding: 1vw 1.7vw;
-          border: 0.4vw solid #f1f1f1;
+          bottom: 3.8vw;
+          right: 0.1vw;
+          font-size: 2vw;
+          padding: 0.7vw 1.6vw;
+          border: 0.2vw solid #f1f1f1;
         }
       }
       .img-hover-effect {
-        gap: 3vw;
+        gap: 2vw;
         img {
-          border-radius: 50%;
-          width: 12vw;
-          height: 12vw;
-          border: 0.2vw solid #f1f1f1;
+          width: 8vw;
+          height: 8vw;
+          border: 0.15vw solid #f1f1f1;
         }
         p {
-          padding: 1vw;
-          /* line-height: 2vh; */
-          font-size: 3vw;
+          padding: 0.7vw;
+          font-size: 2.5vw;
         }
       }
     }
     button {
       box-shadow: 0 0 1vw rgba(33, 33, 33, 0.7);
       width: 86vw;
-      height: 8vh;
+      height: 12vw;
       font-size: 6vw;
       padding: 1.7vw 2vw;
       border-radius: 6vw;
