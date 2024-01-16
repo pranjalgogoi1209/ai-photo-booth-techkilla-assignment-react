@@ -67,7 +67,7 @@ const HomeWrapper = styled.div`
     justify-content: space-around;
     height: calc(100vh - 120px);
     .images-container {
-      /* border: 1px solid black; */
+      border: 1px solid black;
       display: flex;
       justify-content: center;
       gap: 2vw;

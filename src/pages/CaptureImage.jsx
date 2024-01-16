@@ -28,13 +28,17 @@ export default function CaptureImage() {
   };
   return (
     <CaptureImageWrapper>
-      <div className="webcam-container">
-        <Webcam ref={webRef} className="webcam" />
-        {img && <img src={img} />}
-      </div>
       <button onClick={handleCapture} ref={btnRef} className="capture">
         Capture
       </button>
+      <div className="webcam-container">
+        <div className="webcam-parent">
+          <Webcam ref={webRef} className="webcam" />
+          <i>Watching</i>
+        </div>
+        {img && <img src={img} />}
+      </div>
+
       <button className="submit" onClick={handleSubmit}>
         Submit
       </button>
@@ -43,23 +47,33 @@ export default function CaptureImage() {
 }
 
 const CaptureImageWrapper = styled.div`
-  height: 100vh;
+  height: calc(100vh - 120px);
   display: flex;
   flex-direction: column;
-  gap: 2vw;
+  justify-content: space-around;
   align-items: center;
   border: 1px solid black;
   .webcam-container {
-    border: 1px solid black;
+    border: 0.3vw solid rgba(33, 33, 33, 0.9);
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
     height: 50vh;
     width: 33vw;
+    background-color: #212121;
+    border-radius: 2vw;
+    .webcam-parent {
+      position: relative;
+      i {
+        position: absolute;
+        top: 0.5vw;
+        left: 13vw;
+      }
+    }
   }
   .webcam {
-    border: 1px solid black;
+    border-radius: 2vw;
     width: 100%;
     height: 100%;
   }
@@ -68,11 +82,17 @@ const CaptureImageWrapper = styled.div`
     top: 0;
     width: 100%;
     height: 100%;
+    border-radius: 2vw;
   }
   .capture {
-    font-size: 2vw;
+    font-size: 1.5vw;
+    width: 10vw;
+    background-color: #212121;
+    color: #f1f1f1;
+    border: 0.3vw solid #212121;
   }
   .submit {
     margin-top: 2vw;
+    width: 33vw;
   }
 `;
