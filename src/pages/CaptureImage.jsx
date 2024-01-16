@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-export default function CaptureImage() {
+export default function CaptureImage({ setCapturedImg }) {
   const [img, setImg] = useState();
   const [isWebcamPresent, setIsWebcamPresent] = useState(false);
   const webRef = useRef();
@@ -37,6 +37,7 @@ export default function CaptureImage() {
 
   const handleSubmit = () => {
     if (img) {
+      setCapturedImg(img);
       navigate("/avatar");
     } else {
       toast.error("Please capture your image", toastOptions);
