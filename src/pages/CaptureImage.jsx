@@ -160,6 +160,38 @@ const CaptureImageWrapper = styled.div`
     }
   }
 
+  /* for tablet */
+  @media screen and (max-width: 991px) {
+    background-color: orange;
+    margin-top: 5vw;
+    gap: 5vh;
+    .webcam-container {
+      border: 0.6vw solid rgba(33, 33, 33, 0.9);
+      width: 60vw;
+      height: 45vh;
+      .webcam-parent {
+        i {
+          font-size: 5vw;
+          top: 3vw;
+          left: 27vw;
+        }
+      }
+    }
+    .capture {
+      margin-top: -4vw;
+      width: 25vw;
+      font-size: 3vw;
+      padding: 1.2vw 1.5vw;
+    }
+    .submit {
+      width: 60vw;
+      height: 9vh;
+      font-size: 5vw;
+      padding: 1.7vw 2vw;
+      border-radius: 6vw;
+    }
+  }
+
   /* for phones */
   @media screen and (max-width: 767px) {
     background-color: pink;
@@ -168,7 +200,7 @@ const CaptureImageWrapper = styled.div`
     .webcam-container {
       border: 1vw solid rgba(33, 33, 33, 0.9);
       width: 80vw;
-      height: 55vh;
+      height: 53vh;
       .webcam-parent {
         i {
           font-size: 7vw;

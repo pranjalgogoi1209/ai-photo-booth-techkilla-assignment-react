@@ -266,6 +266,50 @@ const HomeWrapper = styled.div`
     }
   }
 
+  /* for tablet */
+  @media screen and (max-width: 991px) {
+    .Home {
+      background-color: orange;
+      margin-top: 5vw;
+      gap: 4vw;
+      main {
+        gap: 4vw;
+        .superHeros1,
+        .superHeros2,
+        .superHeros3 {
+          width: 100%;
+          display: flex;
+          justify-content: space-evenly;
+          gap: 2vw;
+        }
+        img {
+          width: 20vw;
+          height: 25vw;
+          border-radius: 2vw;
+          border: 0.4vw solid #212121;
+          &:hover {
+            transform: rotate(15deg);
+          }
+        }
+      }
+      .superhero-container {
+        .design {
+          display: none;
+        }
+      }
+      a {
+        width: 29.6vw;
+        border: 1px solid black;
+        border-radius: 5vw;
+        button {
+          border-radius: 5vw;
+          font-size: 4vw;
+          padding: 1.7vw 4.1vw;
+        }
+      }
+    }
+  }
+
   /* for phones */
   @media screen and (max-width: 767px) {
     background-color: pink;

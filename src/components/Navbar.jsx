@@ -42,7 +42,23 @@ const NavbarWrapper = styled.nav`
     background-color: green;
   }
 
-  /* smartphones, iPhone, portrait 480x320 phones */
+  /* fot tablets */
+  @media screen and (max-width: 991px) {
+    background-color: orange;
+    height: 10.5vw;
+    .logo {
+      width: 35vw;
+    }
+    .title {
+      h1 {
+        font-size: 5vw;
+        color: #212121;
+        text-shadow: 0.2vw 0.2vw 0.2vw rgba(33, 33, 33, 0.5);
+      }
+    }
+  }
+
+  /* for phones */
   @media screen and (max-width: 767px) {
     background-color: pink;
     height: 10.5vw;
