@@ -247,7 +247,7 @@ const HomeWrapper = styled.div`
     }
   }
 
-  /* for ultra hi-res laptops and desktops */
+  /* for ultra big screen */
   @media screen and (min-width: 1721px) {
     background-color: green;
     main {
@@ -266,7 +266,7 @@ const HomeWrapper = styled.div`
     }
   }
 
-  /* smartphones, iPhone, portrait 480x320 phones */
+  /* for phones */
   @media screen and (max-width: 767px) {
     background-color: pink;
     .Home {
@@ -303,12 +303,13 @@ const HomeWrapper = styled.div`
         }
       }
       a {
-        width: 30.6vw;
-
+        width: 35vw;
         border: 1px solid black;
+        border-radius: 5vw;
         button {
+          border-radius: 5vw;
           font-size: 5vw;
-          padding: 1.7vw 2vw;
+          padding: 1.7vw 4.1vw;
         }
       }
     }

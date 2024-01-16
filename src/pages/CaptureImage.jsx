@@ -70,7 +70,6 @@ export default function CaptureImage({ setCapturedImg }) {
 }
 
 const CaptureImageWrapper = styled.div`
-  /* height: calc(100vh - 120px); */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -160,6 +159,37 @@ const CaptureImageWrapper = styled.div`
     }
     .submit {
       width: 40vw;
+    }
+  }
+
+  /* for phones */
+  @media screen and (max-width: 767px) {
+    background-color: pink;
+    margin-top: 5vw;
+    gap: 5vh;
+    .webcam-container {
+      border: 1vw solid rgba(33, 33, 33, 0.9);
+      width: 80vw;
+      height: 60vh;
+      .webcam-parent {
+        i {
+          font-size: 7vw;
+          top: 5vw;
+          left: 36vw;
+        }
+      }
+    }
+    .capture {
+      width: 30vw;
+      font-size: 5vw;
+      padding: 1.7vw 2vw;
+    }
+    .submit {
+      width: 80vw;
+      height: 9vh;
+      font-size: 5vw;
+      padding: 1.7vw 2vw;
+      border-radius: 5vw;
     }
   }
 `;
