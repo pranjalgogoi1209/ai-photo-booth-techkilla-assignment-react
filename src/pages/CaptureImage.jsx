@@ -205,8 +205,46 @@ const CaptureImageWrapper = styled.div`
     }
   }
 
-  /* for phones */
+  /* for small tablet portrait */
   @media screen and (max-width: 767px) {
+    background-color: pink;
+    margin-top: 5vw;
+    gap: 5vh;
+    .webcam-with-capture {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6vh;
+    }
+    .webcam-container {
+      border: 1vw solid rgba(33, 33, 33, 0.9);
+      width: 55vh;
+      height: 53vh;
+      .webcam-parent {
+        i {
+          font-size: 7vw;
+          top: 5vw;
+          left: 36vw;
+        }
+      }
+    }
+    .capture {
+      width: 30vw;
+      font-size: 4vw;
+      padding: 1.7vw 2vw;
+      margin-top: -4vh;
+    }
+    .submit {
+      width: 80vw;
+      height: 8vh;
+      font-size: 6vw;
+      padding: 1.7vw 2vw;
+      border-radius: 6vw;
+    }
+  }
+
+  /* for mobiles portrait and small tablets portrait */
+  @media screen and (max-width: 641px) {
     background-color: pink;
     margin-top: 5vw;
     gap: 5vh;

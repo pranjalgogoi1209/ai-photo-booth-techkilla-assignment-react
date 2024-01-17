@@ -264,7 +264,7 @@ const HomeWrapper = styled.div`
           gap: 2vw;
         }
         img {
-          box-shadow: 0.6vw 0.6vw 0.7vw rgba(33, 33, 33, 0.7);
+          box-shadow: 0.5vw 0.5vw 0.7vw rgba(33, 33, 33, 0.6);
           width: 20vw;
           height: 28vw;
           border-radius: 2vw;
@@ -315,11 +315,11 @@ const HomeWrapper = styled.div`
           }
         }
         img {
+          box-shadow: 0.6 0.6vw 0.8vw rgba(33, 33, 33, 0.6);
           border: 0.6vw solid rgba(33, 33, 33, 0.9);
           width: 40vw;
           height: 55vw;
           border-radius: 2vw;
-          box-shadow: 1vw 1vw 1vw rgba(33, 33, 33, 0.7);
           &:hover {
             transform: rotate(10deg);
           }
