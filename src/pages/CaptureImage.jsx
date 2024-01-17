@@ -218,7 +218,7 @@ const CaptureImageWrapper = styled.div`
     }
     .webcam-container {
       border: 1vw solid rgba(33, 33, 33, 0.9);
-      width: 50vh;
+      width: 45vh;
       height: 53vh;
       .webcam-parent {
         i {
