@@ -37,11 +37,6 @@ const NavbarWrapper = styled.nav`
     text-shadow: 0.2vw 0.2vw 0.2vw rgba(33, 33, 33, 0.5);
   }
 
-  /* for ultra hi-res laptops and desktops */
-  @media screen and (min-width: 1721px) {
-    background-color: green;
-  }
-
   /* fot tablets */
   @media screen and (max-width: 991px) {
     background-color: orange;

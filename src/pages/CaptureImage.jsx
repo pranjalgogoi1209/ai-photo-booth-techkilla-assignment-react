@@ -77,15 +77,21 @@ const CaptureImageWrapper = styled.div`
   justify-content: space-around;
   align-items: center;
   border: 1px solid black;
-
+  margin-top: 2vw;
+  .webcam-with-capture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5vw;
+  }
   .webcam-container {
     border: 0.3vw solid rgba(33, 33, 33, 0.9);
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
-    width: 40vw;
-    height: 30vw;
+    width: 33vw;
+    height: 25vw;
     background-color: #212121;
     border-radius: 2vw;
     overflow: hidden;
@@ -97,7 +103,7 @@ const CaptureImageWrapper = styled.div`
         font-size: 2.5vw;
         position: absolute;
         top: 2vw;
-        left: 18.5vw;
+        left: 15vw;
         color: #eee;
       }
     }
@@ -146,28 +152,6 @@ const CaptureImageWrapper = styled.div`
     }
   }
 
-  /* for ultra hi-res laptops and desktops */
-  @media screen and (min-width: 1721px) {
-    margin-top: 2vw;
-    background-color: green;
-    align-items: center;
-    justify-content: center;
-    gap: 2vw;
-    .webcam-container {
-      width: 40vw;
-      height: 30vw;
-      .webcam-parent {
-        i {
-          top: 2vw;
-          left: 18.5vw;
-        }
-      }
-    }
-    .submit {
-      width: 40vw;
-    }
-  }
-
   /* for big tablets and mobile landscape */
   @media screen and (max-width: 991px) {
     background-color: orange;
@@ -175,6 +159,7 @@ const CaptureImageWrapper = styled.div`
     gap: 5vh;
     .webcam-with-capture {
       display: flex;
+      flex-direction: row;
       gap: 2vw;
       align-items: center;
     }
@@ -218,7 +203,7 @@ const CaptureImageWrapper = styled.div`
     }
     .webcam-container {
       border: 1vw solid rgba(33, 33, 33, 0.9);
-      width: 62vw;
+      width: 64vw;
       height: 53vh;
       .webcam-parent {
         i {

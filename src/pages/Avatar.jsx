@@ -97,6 +97,9 @@ const AvatarWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 2vw;
+  h1 {
+    font-size: 4vw;
+  }
   main {
     border: 1px solid black;
     padding: 1vw;
@@ -135,13 +138,13 @@ const AvatarWrapper = styled.div`
       .selected-text {
         display: flex;
         position: absolute;
-        bottom: 3.3vw;
+        bottom: 3.5vh;
         right: 0vw;
         transform: rotate(-40deg);
-        font-size: 2vw;
+        font-size: 2vh;
         color: #f1f1f1;
         font-weight: bold;
-        border-radius: 1vw;
+        border-radius: 0.5vw;
         padding: 0.4vw 0.8vw 0.4vw 0.8vw;
         background-color: #212121;
         border: 0.2vw solid #f1f1f1;
@@ -158,20 +161,21 @@ const AvatarWrapper = styled.div`
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 1vw;
+      gap: 1vh;
       background: linear-gradient(rgba(241, 241, 241, 0.3), #212121);
       cursor: pointer;
       img {
         border-radius: 50%;
-        width: 5vw;
-        height: 5vw;
-        border: 0.1vw solid #212121;
+        width: 9vh;
+        height: 9vh;
+        border: 0.15vw solid #f1f1f1;
       }
       p {
         color: #f1f1f1;
         font-weight: bold;
         text-align: center;
         padding: 0.5vw;
+        font-size: 3vh;
       }
     }
   }
@@ -194,11 +198,6 @@ const AvatarWrapper = styled.div`
       left: 100%;
       right: 0;
     }
-  }
-
-  /* for ultra hi-res laptops and desktops */
-  @media screen and (min-width: 1721px) {
-    background-color: green;
   }
 
   /* for big-tablets & mobile-landscape */
