@@ -107,7 +107,7 @@ const AvatarWrapper = styled.div`
     flex-wrap: wrap;
     gap: 6vw;
     .single-image {
-      box-shadow: 0 0.8vw 1vw rgba(33, 33, 33, 1);
+      box-shadow: 0 0.6vw 0.7vw rgba(33, 33, 33, 0.6);
       height: 39.5vh;
       position: relative;
       border: 0.3vw solid #212121;
