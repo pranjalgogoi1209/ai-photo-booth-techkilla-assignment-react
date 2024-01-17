@@ -218,13 +218,13 @@ const CaptureImageWrapper = styled.div`
     }
     .webcam-container {
       border: 1vw solid rgba(33, 33, 33, 0.9);
-      width: 60vw;
+      width: 62vw;
       height: 53vh;
       .webcam-parent {
         i {
           font-size: 7vw;
           top: 5vw;
-          left: 25vw;
+          left: 28vw;
         }
       }
     }
