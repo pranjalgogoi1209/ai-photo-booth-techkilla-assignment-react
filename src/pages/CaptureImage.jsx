@@ -169,7 +169,7 @@ const CaptureImageWrapper = styled.div`
         i {
           font-size: 5vw;
           top: 3vw;
-          left: 21vw;
+          left: 20vw;
         }
       }
     }
