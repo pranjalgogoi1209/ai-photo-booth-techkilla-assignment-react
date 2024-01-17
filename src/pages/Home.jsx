@@ -36,11 +36,11 @@ export default function Home() {
         <main>
           <div className="superHeros1">
             {superHeros1 &&
-              superHeros1.map(superHero => (
+              superHeros1.map((superHero, index) => (
                 <div className="superhero-container">
                   <img
                     src={superHero}
-                    key={superHero}
+                    key={index}
                     onMouseOut={e => handleMouseOut(e)}
                   />
                   <div className="design"></div>
@@ -49,11 +49,11 @@ export default function Home() {
           </div>
           <div className="superHeros2">
             {superHeros2 &&
-              superHeros2.map(superHero => (
+              superHeros2.map((superHero, index) => (
                 <div className="superhero-container">
                   <img
                     src={superHero}
-                    key={superHero}
+                    key={index}
                     onMouseOut={e => handleMouseOut(e)}
                   />
                   <div className="design"></div>
@@ -62,11 +62,11 @@ export default function Home() {
           </div>
           <div className="superHeros3">
             {superHeros3 &&
-              superHeros3.map(superHero => (
+              superHeros3.map((superHero, index) => (
                 <div className="superhero-container">
                   <img
                     src={superHero}
-                    key={superHero}
+                    key={index}
                     onMouseOut={e => handleMouseOut(e)}
                   />
                   <div className="design"></div>

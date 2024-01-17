@@ -268,6 +268,7 @@ const AvatarWrapper = styled.div`
           font-size: 3.3vw;
           padding: 1vw 1.7vw;
           border: 0.4vw solid #f1f1f1;
+          border-radius: 1.4vw;
         }
       }
       .img-hover-effect {
@@ -280,7 +281,6 @@ const AvatarWrapper = styled.div`
         }
         p {
           padding: 1vw;
-          /* line-height: 2vh; */
           font-size: 3vw;
         }
       }
