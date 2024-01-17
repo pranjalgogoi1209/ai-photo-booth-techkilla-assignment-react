@@ -153,7 +153,6 @@ const CaptureImageWrapper = styled.div`
 
   /* for big tablets and mobile landscape */
   @media screen and (max-width: 991px) {
-    background-color: orange;
     margin-top: 5vw;
     gap: 5vh;
     .webcam-with-capture {
@@ -191,7 +190,6 @@ const CaptureImageWrapper = styled.div`
 
   /* for small tablet portrait */
   @media screen and (max-width: 767px) {
-    background-color: pink;
     margin-top: 5vw;
     gap: 5vh;
     .webcam-with-capture {
