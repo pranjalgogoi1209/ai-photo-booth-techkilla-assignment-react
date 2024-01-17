@@ -7,10 +7,10 @@
 body {
   padding: 2vw 2vw 2vw 2vw;
   background-color: #f1f1f1;
-  background-image: url("./assets/wall-1.png");
+  background-image: url("./assets/BG-01.png");
   background-position: center;
   background-size: cover;
-  background-repeat: repeat-y;
+  background-repeat: repeat;
   /* background: linear-gradient(skyblue, white); */
 }
 h1 {

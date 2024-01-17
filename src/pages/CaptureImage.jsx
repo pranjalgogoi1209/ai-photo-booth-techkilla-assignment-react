@@ -163,19 +163,19 @@ const CaptureImageWrapper = styled.div`
     }
     .webcam-container {
       border: 0.6vw solid rgba(33, 33, 33, 0.9);
-      width: 60vw;
-      height: 45vw;
+      width: 46vw;
+      height: 35vw;
       .webcam-parent {
         i {
           font-size: 5vw;
           top: 3vw;
-          left: 27vw;
+          left: 21vw;
         }
       }
     }
     .capture {
-      width: 25vw;
-      height: 10vw;
+      width: 20vw;
+      height: 8vw;
       font-size: 3vw;
       padding: 1.2vw 1.5vw;
     }
@@ -227,7 +227,6 @@ const CaptureImageWrapper = styled.div`
 
   /* for mobiles portrait and small tablets portrait */
   @media screen and (max-width: 600px) {
-    background-color: pink;
     margin-top: 5vw;
     gap: 5vh;
     .webcam-with-capture {
