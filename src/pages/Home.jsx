@@ -264,6 +264,7 @@ const HomeWrapper = styled.div`
           gap: 2vw;
         }
         img {
+          box-shadow: 0.6vw 0.6vw 0.7vw rgba(33, 33, 33, 0.7);
           width: 20vw;
           height: 28vw;
           border-radius: 2vw;
@@ -283,6 +284,7 @@ const HomeWrapper = styled.div`
         border: 1px solid black;
         border-radius: 5vw;
         button {
+          box-shadow: 0vw 0vw 0.5vw rgba(33, 33, 33, 0.7);
           border-radius: 5vw;
           font-size: 3.6vw;
           padding: 1.7vw 4.1vw;
@@ -317,6 +319,7 @@ const HomeWrapper = styled.div`
           width: 40vw;
           height: 55vw;
           border-radius: 2vw;
+          box-shadow: 1vw 1vw 1vw rgba(33, 33, 33, 0.7);
           &:hover {
             transform: rotate(10deg);
           }
@@ -332,6 +335,7 @@ const HomeWrapper = styled.div`
         border: 1px solid black;
         border-radius: 5vw;
         button {
+          box-shadow: 0vw 0vw 0.5vw rgba(33, 33, 33, 0.7);
           border-radius: 5vw;
           font-size: 5vw;
           padding: 1.7vw 4.1vw;
