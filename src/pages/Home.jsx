@@ -188,7 +188,6 @@ const HomeWrapper = styled.div`
       }
       a {
         width: 27.5vw;
-        border: 1px solid black;
         border-radius: 5vw;
         button {
           box-shadow: 0vw 0vw 0.5vw rgba(33, 33, 33, 0.7);
@@ -238,7 +237,6 @@ const HomeWrapper = styled.div`
       }
       a {
         width: 35vw;
-        border: 1px solid black;
         border-radius: 5vw;
         button {
           box-shadow: 0vw 0vw 0.5vw rgba(33, 33, 33, 0.7);
