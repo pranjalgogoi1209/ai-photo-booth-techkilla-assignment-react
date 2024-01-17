@@ -218,7 +218,7 @@ const CaptureImageWrapper = styled.div`
     }
     .webcam-container {
       border: 1vw solid rgba(33, 33, 33, 0.9);
-      width: 55vh;
+      width: 50vh;
       height: 53vh;
       .webcam-parent {
         i {
@@ -244,7 +244,7 @@ const CaptureImageWrapper = styled.div`
   }
 
   /* for mobiles portrait and small tablets portrait */
-  @media screen and (max-width: 641px) {
+  @media screen and (max-width: 600px) {
     background-color: pink;
     margin-top: 5vw;
     gap: 5vh;
