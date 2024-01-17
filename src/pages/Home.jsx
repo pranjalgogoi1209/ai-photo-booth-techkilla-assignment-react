@@ -264,7 +264,7 @@ const HomeWrapper = styled.div`
           gap: 2vw;
         }
         img {
-          box-shadow: 0.5vw 0.5vw 0.7vw rgba(33, 33, 33, 0.6);
+          box-shadow: 0.3vw 0.3vw 0.6vw rgba(33, 33, 33, 0.6);
           width: 20vw;
           height: 28vw;
           border-radius: 2vw;
