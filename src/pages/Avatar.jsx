@@ -91,7 +91,6 @@ export default function Avatar({ capturedImg }) {
 }
 
 const AvatarWrapper = styled.div`
-  border: 1px solid black;
   margin-top: 2vw;
   display: flex;
   flex-direction: column;
@@ -101,7 +100,6 @@ const AvatarWrapper = styled.div`
     font-size: 4vw;
   }
   main {
-    border: 1px solid black;
     padding: 1vw;
     display: flex;
     justify-content: center;
@@ -202,7 +200,6 @@ const AvatarWrapper = styled.div`
 
   /* for big-tablets & mobile-landscape */
   @media screen and (max-width: 991px) {
-    background-color: orange;
     gap: 4vw;
     margin-top: 5vw;
     h1 {
@@ -250,7 +247,6 @@ const AvatarWrapper = styled.div`
 
   /* for phones */
   @media screen and (max-width: 767px) {
-    background-color: pink;
     gap: 5vw;
     margin-top: 5vw;
     h1 {

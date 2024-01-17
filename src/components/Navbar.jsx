@@ -19,13 +19,11 @@ export default function Navbar() {
 }
 
 const NavbarWrapper = styled.nav`
-  border: 1px solid black;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 5.5vw;
   .logo {
-    border: 1px solid black;
     width: 20vw;
     img {
       width: 100%;
@@ -39,7 +37,6 @@ const NavbarWrapper = styled.nav`
 
   /* fot tablets */
   @media screen and (max-width: 991px) {
-    background-color: orange;
     height: 9.5vw;
     .logo {
       width: 34vw;
@@ -55,7 +52,6 @@ const NavbarWrapper = styled.nav`
 
   /* for phones */
   @media screen and (max-width: 767px) {
-    background-color: pink;
     height: 10.5vw;
     .logo {
       width: 35vw;

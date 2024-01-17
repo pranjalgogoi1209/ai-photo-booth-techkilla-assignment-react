@@ -33,97 +33,7 @@ export default function Home() {
         <Link to={"/capture-image"}>
           <button>Start Now</button>
         </Link>
-
         <main>
-          {/* <div className="superHeros1">
-            <div className="superhero-container">
-              <img
-                src={superHero1}
-                alt="super-hero-1"
-                onMouseOut={e => handleMouseOut(e)}
-              />
-              <div className="design"></div>
-            </div>
-            <div className="superhero-container">
-              <img
-                src={superHero3}
-                alt="super-hero-3"
-                onMouseOut={e => handleMouseOut(e)}
-              />
-              <div className="design"></div>
-            </div>
-            <div className="superhero-container">
-              <img
-                src={superHero2}
-                alt="super-hero-2"
-                onMouseOut={e => handleMouseOut(e)}
-              />
-              <div className="design"></div>
-            </div>
-          </div>
-
-          <div className="superHeros2">
-            <div className="superhero-container">
-              <img
-                src={superHero4}
-                alt="super-hero-4"
-                onMouseOut={e => handleMouseOut(e)}
-              />
-              <div className="design"></div>
-            </div>
-            <div className="superhero-container">
-              <img
-                src={superHero5}
-                alt="super-hero-5"
-                onMouseOut={e => handleMouseOut(e)}
-              />
-              <div className="design"></div>
-            </div>
-            <div className="superhero-container">
-              <img
-                src={superHero6}
-                alt="super-hero-6"
-                onMouseOut={e => handleMouseOut(e)}
-              />
-              <div className="design"></div>
-            </div>
-            <div className="superhero-container">
-              <img
-                src={superHero7}
-                alt="super-hero-7"
-                onMouseOut={e => handleMouseOut(e)}
-              />
-              <div className="design"></div>
-            </div>
-          </div>
-
-          <div className="superHeros3">
-            <div className="superhero-container">
-              <img
-                src={superHero8}
-                alt="super-hero-8"
-                onMouseOut={e => handleMouseOut(e)}
-              />
-              <div className="design"></div>
-            </div>
-            <div className="superhero-container">
-              <img
-                src={superHero9}
-                alt="super-hero-9"
-                onMouseOut={e => handleMouseOut(e)}
-              />
-              <div className="design"></div>
-            </div>
-            <div className="superhero-container">
-              <img
-                src={superHero10}
-                alt="super-hero-10"
-                onMouseOut={e => handleMouseOut(e)}
-              />
-              <div className="design"></div>
-            </div>
-          </div> */}
-
           <div className="superHeros1">
             {superHeros1 &&
               superHeros1.map(superHero => (
@@ -176,7 +86,6 @@ const HomeWrapper = styled.div`
     flex-direction: column;
     gap: 2vw;
     main {
-      border: 1px solid red;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -188,7 +97,6 @@ const HomeWrapper = styled.div`
       .superHeros2,
       .superHeros3 {
         width: 100%;
-        border: 1px solid black;
         display: flex;
         justify-content: space-evenly;
       }
@@ -250,7 +158,6 @@ const HomeWrapper = styled.div`
   /* for big tablets portrait and mobiles landscape */
   @media screen and (max-width: 991px) {
     .Home {
-      background-color: orange;
       margin-top: 5vw;
       gap: 4vw;
       main {
@@ -295,7 +202,6 @@ const HomeWrapper = styled.div`
 
   /* for mobiles portrait & small tablets portrait */
   @media screen and (max-width: 767px) {
-    background-color: pink;
     .Home {
       gap: 5vw;
       margin-top: 5vw;

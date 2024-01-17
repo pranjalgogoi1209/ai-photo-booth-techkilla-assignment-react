@@ -76,7 +76,6 @@ const CaptureImageWrapper = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid black;
   margin-top: 2vw;
   .webcam-with-capture {
     display: flex;
