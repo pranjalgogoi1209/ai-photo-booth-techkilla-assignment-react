@@ -49,16 +49,20 @@ export default function CaptureImage({ setCapturedImg }) {
 
   return (
     <CaptureImageWrapper>
-      <div className="webcam-container">
-        <div className="webcam-parent">
-          <Webcam ref={webRef} className="webcam" />
-          {isWebcamPresent && <i className="fa-solid fa-camera fa-bounce"></i>}
+      <div className="webcam-with-capture">
+        <div className="webcam-container">
+          <div className="webcam-parent">
+            <Webcam ref={webRef} className="webcam" />
+            {isWebcamPresent && (
+              <i className="fa-solid fa-camera fa-bounce"></i>
+            )}
+          </div>
+          {img && <img src={img} />}
         </div>
-        {img && <img src={img} />}
+        <button onClick={handleCapture} ref={btnRef} className="capture">
+          Capture
+        </button>
       </div>
-      <button onClick={handleCapture} ref={btnRef} className="capture">
-        Capture
-      </button>
       <button className="submit" onClick={handleSubmit}>
         Submit
       </button>
@@ -73,6 +77,7 @@ const CaptureImageWrapper = styled.div`
   justify-content: space-around;
   align-items: center;
   border: 1px solid black;
+
   .webcam-container {
     border: 0.3vw solid rgba(33, 33, 33, 0.9);
     display: flex;
@@ -163,15 +168,20 @@ const CaptureImageWrapper = styled.div`
     }
   }
 
-  /* for tablet */
+  /* for big tablets and mobile landscape */
   @media screen and (max-width: 991px) {
     background-color: orange;
     margin-top: 5vw;
     gap: 5vh;
+    .webcam-with-capture {
+      display: flex;
+      gap: 2vw;
+      align-items: center;
+    }
     .webcam-container {
       border: 0.6vw solid rgba(33, 33, 33, 0.9);
       width: 60vw;
-      height: 45vh;
+      height: 45vw;
       .webcam-parent {
         i {
           font-size: 5vw;
@@ -181,14 +191,14 @@ const CaptureImageWrapper = styled.div`
       }
     }
     .capture {
-      margin-top: -4vw;
       width: 25vw;
+      height: 10vw;
       font-size: 3vw;
       padding: 1.2vw 1.5vw;
     }
     .submit {
-      width: 60vw;
-      height: 9vh;
+      width: 87vw;
+      height: 9vw;
       font-size: 5vw;
       padding: 1.7vw 2vw;
       border-radius: 6vw;
@@ -200,6 +210,12 @@ const CaptureImageWrapper = styled.div`
     background-color: pink;
     margin-top: 5vw;
     gap: 5vh;
+    .webcam-with-capture {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6vh;
+    }
     .webcam-container {
       border: 1vw solid rgba(33, 33, 33, 0.9);
       width: 80vw;

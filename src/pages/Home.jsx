@@ -334,7 +334,7 @@ const HomeWrapper = styled.div`
         img {
           border: 0.6vw solid rgba(33, 33, 33, 0.9);
           width: 40vw;
-          height: 60vw;
+          height: 55vw;
           border-radius: 2vw;
           &:hover {
             transform: rotate(10deg);
