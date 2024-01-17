@@ -35,7 +35,7 @@ export default function Home() {
         </Link>
 
         <main>
-          <div className="superHeros1">
+          {/* <div className="superHeros1">
             <div className="superhero-container">
               <img
                 src={superHero1}
@@ -122,9 +122,9 @@ export default function Home() {
               />
               <div className="design"></div>
             </div>
-          </div>
+          </div> */}
 
-          {/* <div className="superHeros1">
+          <div className="superHeros1">
             {superHeros1 &&
               superHeros1.map(superHero => (
                 <div className="superhero-container">
@@ -162,7 +162,7 @@ export default function Home() {
                   <div className="design"></div>
                 </div>
               ))}
-          </div> */}
+          </div>
         </main>
       </div>
     </HomeWrapper>
@@ -247,26 +247,7 @@ const HomeWrapper = styled.div`
     }
   }
 
-  /* for ultra big screen */
-  @media screen and (min-width: 1721px) {
-    background-color: green;
-    main {
-      img {
-        width: 13vw;
-        height: 15vw;
-      }
-      .superhero-container {
-        .design {
-          top: 0.5vw;
-          left: -0.2vw;
-          width: 12vw;
-          height: 2.5vw;
-        }
-      }
-    }
-  }
-
-  /* for big tablets and mobile landscape */
+  /* for big tablets portrait and mobiles landscape */
   @media screen and (max-width: 991px) {
     .Home {
       background-color: orange;
@@ -310,7 +291,7 @@ const HomeWrapper = styled.div`
     }
   }
 
-  /* for phones */
+  /* for mobiles portrait & small tablets portrait */
   @media screen and (max-width: 767px) {
     background-color: pink;
     .Home {
