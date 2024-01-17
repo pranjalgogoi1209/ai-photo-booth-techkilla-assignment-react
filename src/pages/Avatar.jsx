@@ -98,6 +98,7 @@ const AvatarWrapper = styled.div`
   gap: 2vw;
   h1 {
     font-size: 4vw;
+    text-shadow: 0.2vw 0.2vw 0.4vw rgba(33, 33, 33, 0.4);
   }
   main {
     padding: 1vw;

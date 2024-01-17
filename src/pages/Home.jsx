@@ -190,7 +190,7 @@ const HomeWrapper = styled.div`
         width: 27.5vw;
         border-radius: 5vw;
         button {
-          box-shadow: 0vw 0vw 0.5vw rgba(33, 33, 33, 0.7);
+          box-shadow: 0.3vw 0.3vw 0.6vw rgba(33, 33, 33, 0.6);
           border-radius: 5vw;
           font-size: 3.6vw;
           padding: 1.7vw 4.1vw;
@@ -239,7 +239,7 @@ const HomeWrapper = styled.div`
         width: 35vw;
         border-radius: 5vw;
         button {
-          box-shadow: 0vw 0vw 0.5vw rgba(33, 33, 33, 0.7);
+          box-shadow: 0.4vw 0.4vw 0.6vw rgba(33, 33, 33, 0.9);
           border-radius: 5vw;
           font-size: 5vw;
           padding: 1.7vw 4.1vw;
