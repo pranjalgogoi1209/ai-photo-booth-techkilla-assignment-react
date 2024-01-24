@@ -1,18 +1,78 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { superHeros } from "../utils/constants";
+// import { superHeros } from "../utils/constants";
+import axios from "axios";
+import {
+  superHero1,
+  superHero2,
+  superHero3,
+  superHero4,
+  superHero5,
+  superHero6,
+  superHero7,
+  superHero8,
+  superHero9,
+  superHero10,
+} from "./../assets";
 
 export default function Avatar({ capturedImg }) {
   const [selectedImg, setSelectedImg] = useState();
   const [generatedImg, setGeneratedImg] = useState();
   const [finalImg, setFinalImg] = useState();
 
-  capturedImg && console.log("captured image =>", capturedImg);
+  const canvas = document.createElement("canvas");
+  const context = canvas.getContext("2d");
+
+  const getImageData = img => {
+    canvas.width = img.width;
+    canvas.height = img.height;
+    context.drawImage(img, 0, 0);
+    return canvas.toDataURL("image/png");
+  };
+
+  const superHeros = [
+    {
+      img: superHero3,
+      name: "Super Woman",
+    },
+    {
+      img: superHero4,
+      name: "Hermione Granger",
+    },
+    {
+      img: superHero5,
+      name: "Captain America",
+    },
+    {
+      img: superHero6,
+      name: "Thor",
+    },
+    {
+      img: superHero7,
+      name: "Aquaman",
+    },
+    {
+      img: superHero8,
+      name: "Scarlet Witch",
+    },
+    {
+      img: superHero9,
+      name: "Natasha",
+    },
+    {
+      img: superHero10,
+      name: "Wonder Women",
+    },
+  ];
+
+  generatedImg && console.log(generatedImg);
+
+  capturedImg && console.log("captured image =>", capturedImg.split(",")[1]);
   finalImg && console.log("final image =>", finalImg);
 
   const handleGenerate = () => {
     console.log("clicked");
-    fetch("https://396e-103-17-110-13.ngrok-free.app/rec", {
+    /* fetch("https://396e-103-17-110-13.ngrok-free.app/rec", {
       method: "post",
       headers: {
         Accept: "application/json",
@@ -27,6 +87,30 @@ export default function Avatar({ capturedImg }) {
       .then(data => {
         console.log(data);
         // setGeneratedImg(data);
+      }); */
+
+    /*    axios({
+      method: "post",
+      url: "https://396e-103-17-110-13.ngrok-free.app/rec",
+      data: {
+        image: capturedImg.split(",")[1],
+        choice: finalImg,
+      },
+    }).then(res => {
+      console.log(res);
+    }); */
+
+    axios
+      .post("https://396e-103-17-110-13.ngrok-free.app/rec", {
+        image: capturedImg.split(",")[1],
+        choice: finalImg.split(",")[1],
+      })
+      .then(function (response) {
+        console.log(response);
+        setGeneratedImg(`data:image/webp;base64,${response.data.result}`);
+      })
+      .catch(function (error) {
+        console.log(error);
       });
   };
 
@@ -48,8 +132,15 @@ export default function Avatar({ capturedImg }) {
               <div
                 className="img-hover-effect"
                 onClick={() => {
-                  setSelectedImg(index);
-                  setFinalImg(superHero.img);
+                  /* setSelectedImg(index);
+                  setFinalImg(superHero.img); */
+                  var img = new Image();
+                  img.src = superHero.img;
+                  img.onload = () => {
+                    console.log(img);
+                    console.log(getImageData(img));
+                    setFinalImg(getImageData(img));
+                  };
                 }}
               >
                 <p>Select {superHero.name} avatar and generate your image</p>
@@ -60,6 +151,9 @@ export default function Avatar({ capturedImg }) {
           ))}
       </main>
       <button onClick={handleGenerate}>Generate Image</button>
+      {generatedImg && (
+        <img src={generatedImg} alt="generated image" width={200} />
+      )}
     </AvatarWrapper>
   );
 }
