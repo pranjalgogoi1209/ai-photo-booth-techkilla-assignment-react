@@ -26,7 +26,7 @@ export default function Avatar({ capturedImg }) {
       .then(res => res.json())
       .then(data => {
         console.log(data);
-        // setGeneratedImg()
+        // setGeneratedImg(data);
       });
   };
 
