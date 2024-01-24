@@ -1,63 +1,34 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import {
-  superHero1,
-  superHero2,
-  superHero3,
-  superHero4,
-  superHero5,
-  superHero6,
-  superHero7,
-  superHero8,
-  superHero9,
-  superHero10,
-} from "../assets";
+import { superHeros } from "../utils/constants";
 
 export default function Avatar({ capturedImg }) {
   const [selectedImg, setSelectedImg] = useState();
+  const [generatedImg, setGeneratedImg] = useState();
+  const [finalImg, setFinalImg] = useState();
 
-  const superHeros = [
-    {
-      img: superHero1,
-      name: "Super Man",
-    },
-    {
-      img: superHero2,
-      name: "Harry Potter",
-    },
-    {
-      img: superHero3,
-      name: "Super Woman",
-    },
-    {
-      img: superHero4,
-      name: "Hermione Granger",
-    },
-    {
-      img: superHero5,
-      name: "Captain America",
-    },
-    {
-      img: superHero6,
-      name: "Thor",
-    },
-    {
-      img: superHero7,
-      name: "Aquaman",
-    },
-    {
-      img: superHero8,
-      name: "Scarlet Witch",
-    },
-    {
-      img: superHero9,
-      name: "Natasha",
-    },
-    {
-      img: superHero10,
-      name: "Wonder Women",
-    },
-  ];
+  capturedImg && console.log("captured image =>", capturedImg);
+  finalImg && console.log("final image =>", finalImg);
+
+  const handleGenerate = () => {
+    console.log("clicked");
+    fetch("https://396e-103-17-110-13.ngrok-free.app/rec", {
+      method: "post",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        image: capturedImg,
+        choice: finalImg,
+      }),
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        // setGeneratedImg()
+      });
+  };
 
   return (
     <AvatarWrapper>
@@ -76,7 +47,10 @@ export default function Avatar({ capturedImg }) {
 
               <div
                 className="img-hover-effect"
-                onClick={() => setSelectedImg(index)}
+                onClick={() => {
+                  setSelectedImg(index);
+                  setFinalImg(superHero.img);
+                }}
               >
                 <p>Select {superHero.name} avatar and generate your image</p>
                 <img src={capturedImg} alt="user-captured-image" />
@@ -85,7 +59,7 @@ export default function Avatar({ capturedImg }) {
             </div>
           ))}
       </main>
-      <button>Generate Image</button>
+      <button onClick={handleGenerate}>Generate Image</button>
     </AvatarWrapper>
   );
 }

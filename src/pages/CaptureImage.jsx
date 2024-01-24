@@ -38,8 +38,13 @@ export default function CaptureImage({ setCapturedImg }) {
     theme: "dark",
   };
 
+  const getBase64StringFromDataURL = dataURL =>
+    dataURL.replace("data:", "").replace(/^.+,/, "");
+
   const handleSubmit = () => {
     if (img) {
+      // const finalImage = getBase64StringFromDataURL(img);
+
       setCapturedImg(img);
       navigate("/avatar");
     } else {
@@ -52,7 +57,11 @@ export default function CaptureImage({ setCapturedImg }) {
       <div className="webcam-with-capture">
         <div className="webcam-container">
           <div className="webcam-parent">
-            <Webcam ref={webRef} className="webcam" />
+            <Webcam
+              ref={webRef}
+              className="webcam"
+              screenshotFormat="image/png"
+            />
             {isWebcamPresent && (
               <i className="fa-solid fa-camera fa-bounce"></i>
             )}
